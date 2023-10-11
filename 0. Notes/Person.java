@@ -1,28 +1,24 @@
 public class Person {
     private int age;
-    private boolean isStudent;
-    private double heightInches;
-    private int birthYear;
+    private String firstName;
+    private String lastName;
 
     public Person(){
         age = 0;
-        isStudent = false;
-        heightInches = 10.0;
-        birthYear = 1900;
+        firstName = "";
+        lastName = "";
     }
 
     public Person(int a){
         age = a;
-        isStudent = false;
-        heightInches = 10.0;
-        birthYear = 1900;
+        firstName = "";
+        lastName = "";
     }
 
-    public Person(int a, boolean s, double h, int b){
+    public Person(int a, String f, String l){
         age = a;
-        isStudent = s;
-        heightInches = h;
-        birthYear = b;
+        firstName = f;
+        lastName = l;
     }
 
     public String toString(){
@@ -41,35 +37,19 @@ public class Person {
         return y - age;
     }
 
-    public boolean getIsStudent(){
-        return isStudent;
+    public String getFirstName(){
+        return firstName;
     }
 
-    public void setIsStudent(boolean s){
-        isStudent = s;
+    public void setFirstName(String f){
+        firstName = f;
     }
 
-    public double getHeightInches(){
-        return heightInches;
+    public String getLastName(){
+        return lastName;
     }
 
-    public void setHeightInches(double h){
-        heightInches = h;
-    }
-
-    public double convertHeightFeet(){
-        return heightInches / 12;
-    }
-
-    public double heightIfGrowthSpurt(double h){
-        return heightInches + h;
-    }
-
-    public int getBirthYear(){
-        return birthYear;
-    }
-
-    public void setBirthYear(int b){
-        birthYear = b;
+    public void setLastName(String l){
+        lastName = l;
     }
 }
